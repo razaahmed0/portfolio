@@ -1,3 +1,15 @@
+:root {
+  --mainColor: #eaeaea;
+  --secondaryColor: #fff;
+  --borderColor: #c1c1c1;
+  --mainText: black;
+  --secondaryText: #4b5156;
+  --themeDoBorder: #24292e;
+  --previewBg: rgb(251, 249, 243, 0.8);
+  --previewShadow: #f0ead6;
+  --buttonColor: black;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +27,7 @@ h4,
 h5,
 h6,
 strong {
-  color: black;
+  color: var(--mainText);
   font-family: "Russo One", sans-serif;
   font-weight: 500;
 }
@@ -26,7 +38,7 @@ span,
 label,
 input,
 textarea {
-  color: #4b5156;
+  color: var(--secondaryText);
   font-family: "Roboto Mono", monospace;
 }
 
@@ -68,12 +80,12 @@ section {
   overflow: auto;
 }
 section.s1 {
-  background-color: #eaeaea;
-  border-bottom: 1px solid #c1c1c1;
+  background-color: var(--mainColor);
+  border-bottom: 1px solid var(--borderColor);
 }
 section.s2 {
-  background-color: #fff;
-  border-bottom: 1px solid #c1c1c1;
+  background-color: var(--secondaryColor);
+  border-bottom: 1px solid var(--borderColor);
 }
 
 .main-container {
@@ -97,8 +109,8 @@ section.s2 {
   display: grid;
   grid-template-areas: "nav-wrapper nav-wrapper" "left-column right-column";
   grid-template-columns: 1fr 1fr;
-  background-color: #fff;
-  border: 1px solid #c1c1c1;
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
   border-radius: 5px 5px 0 0;
 }
@@ -113,8 +125,8 @@ section.s2 {
   grid-area: nav-wrapper;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #c1c1c1;
-  background-color: #eaeaea;
+  border-bottom: 1px solid var(--borderColor);
+  background-color: var(--mainColor);
   border-radius: 5px 5px 0 0;
 }
 .intro-wrapper .nav-wrapper .dots-wrapper {
@@ -147,13 +159,16 @@ section.s2 {
   margin-right: 5px;
   margin-left: 5px;
 }
+.intro-wrapper .nav-wrapper #navigation a {
+  color: var(--mainText);
+}
 .intro-wrapper .left-column {
   grid-area: left-column;
   padding-top: 50px;
   padding-bottom: 50px;
 }
 .intro-wrapper .left-column #profile-pic {
-  border: 2px solid #c1c1c1;
+  border: 2px solid var(--borderColor);
   display: block;
   height: 200px;
   margin: 0 auto;
@@ -161,7 +176,7 @@ section.s2 {
   width: 200px;
 }
 .intro-wrapper .left-column .theme-dot {
-  border: 2px solid #24292e;
+  border: 2px solid var(--themeDoBorder);
   height: 30px;
   margin: 5px;
   width: 30px;
@@ -206,14 +221,14 @@ section.s2 {
   height: 180px;
   padding-left: 30px;
   padding-top: 30px;
-  background-color: #f0ead6;
+  background-color: var(--previewShadow);
 }
 .intro-wrapper .right-column #preview {
   position: relative;
   padding: 15px;
   width: 300px;
   border: 1.5px solid #17a2b8;
-  background-color: rgba(251, 249, 243, 0.8);
+  background-color: var(--previewBg);
 }
 .intro-wrapper .right-column .corner {
   position: absolute;
@@ -248,12 +263,12 @@ section.s2 {
 .about-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 100px;
   padding-bottom: 50px;
   padding-top: 50px;
-  gap: 100px;
 }
 .about-wrapper #skills {
-  background-color: #f0ead6;
+  background-color: var(--previewShadow);
   display: flex;
   justify-content: space-evenly;
 }
@@ -274,7 +289,7 @@ section.s2 {
   padding-bottom: 50px;
 }
 .post-wrapper .post {
-  border: 1px solid #c1c1c1;
+  border: 1px solid var(--borderColor);
   box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 }
 .post-wrapper .post .thumbnail {
@@ -302,9 +317,9 @@ section.s2 {
   max-width: 600px;
   margin: 0 auto 50px;
   padding: 15px;
-  border: 1px solid #c1c1c1;
+  border: 1px solid var(--borderColor);
   border-radius: 5px;
-  background-color: #eaeaea;
+  background-color: var(--mainColor);
 }
 #contact-form label {
   line-height: 2.7em;
@@ -318,8 +333,8 @@ section.s2 {
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 0.875rem;
-  background-color: #fff;
-  border: 1px solid #c1c1c1;
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
   border-radius: 5px;
 }
 #contact-form #submit-btn {
@@ -327,7 +342,7 @@ section.s2 {
   padding-top: 10px;
   padding-bottom: 10px;
   width: 100%;
-  background-color: black;
+  background-color: var(--buttonColor);
   border: none;
   color: #fff;
 }

@@ -1,17 +1,19 @@
-$mainColor: #eaeaea;
-$secondaryColor: #fff;
+:root {
+	--mainColor: #eaeaea;
+	--secondaryColor: #fff;
 
-$borderColor: #c1c1c1;
+	--borderColor: #c1c1c1;
 
-$mainText: black;
-$secondaryText: #4b5156;
+	--mainText: black;
+	--secondaryText: #4b5156;
 
-$themeDoBorder: #24292e;
+	--themeDoBorder: #24292e;
 
-$previewBg: rgb(251, 249, 243, 0.8);
-$previewShadow: #f0ead6;
+	--previewBg: rgb(251, 249, 243, 0.8);
+	--previewShadow: #f0ead6;
 
-$buttonColor: black;
+	--buttonColor: black;
+}
 
 * {
 	box-sizing: border-box;
@@ -30,7 +32,7 @@ h4,
 h5,
 h6,
 strong {
-	color: $mainText;
+	color: var(--mainText);
 	font-family: "Russo One", sans-serif;
 	font-weight: 500;
 }
@@ -41,7 +43,7 @@ span,
 label,
 input,
 textarea {
-	color: $secondaryText;
+	color: var(--secondaryText);
 	font-family: "Roboto Mono", monospace;
 }
 
@@ -77,13 +79,13 @@ h6 {
 section {
 	overflow: auto;
 	&.s1 {
-		background-color: $mainColor;
-		border-bottom: 1px solid $borderColor;
+		background-color: var(--mainColor);
+		border-bottom: 1px solid var(--borderColor);
 	}
 
 	&.s2 {
-		background-color: $secondaryColor;
-		border-bottom: 1px solid $borderColor;
+		background-color: var(--secondaryColor);
+		border-bottom: 1px solid var(--borderColor);
 	}
 }
 
@@ -112,8 +114,8 @@ section {
 	// grid-template-rows: 3em 30em;
 
 	// Visual
-	background-color: $secondaryColor;
-	border: 1px solid $borderColor;
+	background-color: var(--secondaryColor);
+	border: 1px solid var(--borderColor);
 	box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 	border-radius: 5px 5px 0 0;
 
@@ -131,8 +133,8 @@ section {
 		align-items: center;
 
 		// Visual
-		border-bottom: 1px solid $borderColor;
-		background-color: $mainColor;
+		border-bottom: 1px solid var(--borderColor);
+		background-color: var(--mainColor);
 		border-radius: 5px 5px 0 0;
 
 		.dots-wrapper {
@@ -171,6 +173,10 @@ section {
 				margin-right: 5px;
 				margin-left: 5px;
 			}
+
+			a {
+				color: var(--mainText);
+			}
 		}
 	}
 	// Hero left column
@@ -181,7 +187,7 @@ section {
 
 		#profile-pic {
 			// Box-model
-			border: 2px solid $borderColor;
+			border: 2px solid var(--borderColor);
 			display: block;
 			height: 200px;
 			margin: 0 auto;
@@ -191,7 +197,7 @@ section {
 
 		.theme-dot {
 			// Box-model
-			border: 2px solid $themeDoBorder;
+			border: 2px solid var(--themeDoBorder);
 			height: 30px;
 			margin: 5px;
 			width: 30px;
@@ -247,7 +253,7 @@ section {
 			padding-left: 30px;
 			padding-top: 30px;
 
-			background-color: $previewShadow;
+			background-color: var(--previewShadow);
 		}
 		#preview {
 			position: relative;
@@ -256,7 +262,7 @@ section {
 			width: 300px;
 
 			border: 1.5px solid #17a2b8;
-			background-color: $previewBg;
+			background-color: var(--previewBg);
 		}
 
 		.corner {
@@ -298,12 +304,12 @@ section {
 	// Box-model
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 100px;
 	padding-bottom: 50px;
 	padding-top: 50px;
-	gap: 100px;
 
 	#skills {
-		background-color: $previewShadow;
+		background-color: var(--previewShadow);
 		display: flex;
 		justify-content: space-evenly;
 	}
@@ -329,7 +335,7 @@ section {
 	padding-bottom: 50px;
 
 	.post {
-		border: 1px solid $borderColor;
+		border: 1px solid var(--borderColor);
 		box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
 		.thumbnail {
 			display: block;
@@ -362,9 +368,9 @@ section {
 	padding: 15px;
 
 	// Visual
-	border: 1px solid $borderColor;
+	border: 1px solid var(--borderColor);
 	border-radius: 5px;
-	background-color: $mainColor;
+	background-color: var(--mainColor);
 
 	label {
 		line-height: 2.7em;
@@ -382,8 +388,8 @@ section {
 		font-size: 0.875rem;
 
 		// Visual
-		background-color: $secondaryColor;
-		border: 1px solid $borderColor;
+		background-color: var(--secondaryColor);
+		border: 1px solid var(--borderColor);
 		border-radius: 5px;
 	}
 	#submit-btn {
@@ -394,7 +400,7 @@ section {
 		width: 100%;
 
 		// Visual
-		background-color: $buttonColor;
+		background-color: var(--buttonColor);
 		border: none;
 		color: #fff;
 	}
